@@ -1,0 +1,84 @@
+{
+  "modelType": "Submodel",
+  "kind": "Instance",
+  "semanticId": {
+    "keys": [
+      {
+        "type": "Submodel",
+        "value": "http://acplt.org/SubmodelTemplates/Temperature"
+      }
+    ],
+    "type": "ExternalReference"
+  },
+  "administration": {
+    "version": "1.0"
+  },
+  "id": "http://acplt.org/Submodels/Assets/ProductionMachine/Temperature",
+  "description": [
+    {
+      "language": "en-us",
+      "text": "A temperature submodel for monitoring the temperature of a production machine"
+    },
+    {
+      "language": "de",
+      "text": "Ein Temperatur-Submodell zur Überwachung der Temperatur einer Produktionsmaschine"
+    }
+  ],
+  "idShort": "Temperature",
+  "submodelElements": [
+    {
+      "modelType": "Property",
+      "semanticId": {
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "http://acplt.org/Properties/Temperature"
+          }
+        ],
+        "type": "ExternalReference"
+      },
+      "value": "22.5",
+      "valueType": "xs:float",
+      "category": "CONSTANT",
+      "description": [
+        {
+          "language": "en-us",
+          "text": "The current temperature of the production machine."
+        },
+        {
+          "language": "de",
+          "text": "Die aktuelle Temperatur der Produktionsmaschine."
+        }
+      ],
+      "idShort": "CurrentTemperature",
+      "unit": "Celsius"
+    },
+    {
+      "modelType": "Property",
+      "semanticId": {
+        "keys": [
+          {
+            "type": "GlobalReference",
+            "value": "http://acplt.org/Properties/TemperatureThreshold"
+          }
+        ],
+        "type": "ExternalReference"
+      },
+      "value": "80.0",
+      "valueType": "xs:float",
+      "category": "CONSTANT",
+      "description": [
+        {
+          "language": "en-us",
+          "text": "The temperature threshold for the production machine."
+        },
+        {
+          "language": "de",
+          "text": "Die Temperaturgrenze für die Produktionsmaschine."
+        }
+      ],
+      "idShort": "TemperatureThreshold",
+      "unit": "Celsius"
+    }
+  ]
+}

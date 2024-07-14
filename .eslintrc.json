@@ -1,0 +1,24 @@
+{
+  "extends": [
+      "next/core-web-vitals",
+      "@typedigital/eslint-config",
+      "@typedigital/eslint-config/react",
+      "@typedigital/eslint-config/typescript"
+  ],
+  "rules": {
+      "react/react-in-jsx-scope": "off", // since React 17 it's not needed anymore
+      "no-magic-numbers": "off", // handled by typescript-eslint
+      "spaced-comment": "off", // next.config.js is otherwise not conform
+      "no-shadow": "off", // false positives with enums in typescript https://github.com/typescript-eslint/typescript-eslint/issues/325
+      "no-void": "off", // due to next api routes we have to return on void - so we need the void operator
+      "promise/prefer-await-to-then": "off", // too opinionated
+      "@typescript-eslint/no-unused-vars" : "warn",
+      "no-unused-vars": "warn", // makes you think you used the wrong type, when new var instantly get marked as errors,
+      "import/no-named-as-default": 0
+  },
+  "parserOptions": {
+    "project": ["tsconfig.json"]
+  },
+  "parser": "@typescript-eslint/parser",
+  "root": true
+}
